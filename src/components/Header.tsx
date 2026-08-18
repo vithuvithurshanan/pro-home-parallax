@@ -58,12 +58,15 @@ function NavLink({
     <Link
       to={to}
       {...(hash ? { hash } : {})}
-      {...(exact ? { activeOptions: { exact: true } as const } : {})}
+      {...(exact
+        ? { activeOptions: { exact: true, includeHash: true } as const }
+        : {})}
       className="text-brand-secondary hover:text-brand-primary transition-colors data-[status=active]:text-brand-primary data-[status=active]:font-bold"
     >
       {children}
     </Link>
   );
 }
+
 
 
