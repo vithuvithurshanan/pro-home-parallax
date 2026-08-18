@@ -59,6 +59,12 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  /* Brand tokens for All Pro Home Improvements */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-muted: var(--brand-muted);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
 }
 
 :root {
@@ -95,6 +101,12 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  /* Brand tokens - Rugged professional */
+  --brand-primary: oklch(0.705 0.187 47.60);
+  --brand-secondary: oklch(0.208 0.040 265.76);
+  --brand-muted: oklch(0.968 0.007 248.08);
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-sans: 'Inter', sans-serif;
 }
 
 .dark {
@@ -130,6 +142,10 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  /* Brand tokens - dark mode */
+  --brand-primary: oklch(0.705 0.187 47.60);
+  --brand-secondary: oklch(0.968 0.007 248.08);
+  --brand-muted: oklch(0.208 0.040 265.76);
 }
 
 @layer base {
@@ -140,5 +156,24 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Parallax background utility */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
   }
 }
