@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect } from "react";
 
 import heroKitchen from "@/assets/hero-kitchen.jpg";
 import parallaxTools from "@/assets/parallax-tools.jpg";
@@ -33,6 +34,16 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://app.allprocontractingny.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="font-sans text-brand-secondary selection:bg-brand-primary/30">
       {/* Hero Section with Parallax Effect */}
@@ -348,45 +359,32 @@ function Index() {
 
               </div>
             </div>
-            <div className="bg-white/5 p-8 border border-white/10">
-              <form
-                className="space-y-4"
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    className="w-full bg-transparent border border-white/20 p-4 focus:border-brand-primary outline-hidden text-white placeholder:text-white/50"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="w-full bg-transparent border border-white/20 p-4 focus:border-brand-primary outline-hidden text-white placeholder:text-white/50"
-                  />
-                </div>
-                <select className="w-full bg-brand-secondary border border-white/20 p-4 focus:border-brand-primary outline-hidden text-white/50">
-                  <option>Project Type</option>
-                  <option>Kitchen Remodel</option>
-                  <option>Roofing/Siding</option>
-                  <option>Handyman Services</option>
-                </select>
-                <textarea
-                  rows={4}
-                  placeholder="Tell us about your home..."
-                  className="w-full bg-transparent border border-white/20 p-4 focus:border-brand-primary outline-hidden text-white placeholder:text-white/50"
-                />
-                <button className="w-full bg-brand-primary text-white py-4 font-bold uppercase tracking-[0.2em] hover:brightness-110 transition-all">
-                  Submit Inquiry
-                </button>
-              </form>
+            <div className="bg-white rounded-lg p-4 border border-white/10 overflow-hidden" style={{ minHeight: "831px" }}>
+              <iframe
+                src="https://app.allprocontractingny.com/widget/form/iv0oB5dSgv3pFewRVoWs"
+                style={{ width: "100%", height: "831px", border: "none", borderRadius: "4px" }}
+                id="inline-iv0oB5dSgv3pFewRVoWs" 
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Optin Claim"
+                data-height="831"
+                data-layout-iframe-id="inline-iv0oB5dSgv3pFewRVoWs"
+                data-form-id="iv0oB5dSgv3pFewRVoWs"
+                title="Optin Claim"
+              />
             </div>
           </div>
           <div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
             <p>&copy; 2024 All Pro Home Improvements. All Rights Reserved.</p>
             <div className="flex gap-8">
               <span>Licensed & Insured</span>
-              <span>Privacy Policy</span>
+              <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link to="/terms-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
             </div>
           </div>
         </div>
