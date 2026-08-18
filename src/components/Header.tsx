@@ -51,14 +51,19 @@ function NavLink({
   exact?: boolean;
   children: ReactNode;
 }) {
-  return (
-    <Link
-      to={to}
-      hash={hash}
-      activeOptions={exact ? { exact: true } : undefined}
-      className="text-brand-secondary hover:text-brand-primary transition-colors data-[status=active]:text-brand-primary data-[status=active]:font-bold"
-    >
+  const baseProps = {
+    to,
+    activeOptions: exact ? ({ exact: true } as const) : undefined,
+    className:
+      "text-brand-secondary hover:text-brand-primary transition-colors data-[status=active]:text-brand-primary data-[status=active]:font-bold",
+  };
+
+  return hash ? (
+    <Link {...baseProps} hash={hash}>
       {children}
     </Link>
+  ) : (
+    <Link {...baseProps}>{children}</Link>
   );
 }
+
