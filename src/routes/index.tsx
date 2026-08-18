@@ -35,42 +35,8 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="font-sans text-brand-secondary selection:bg-brand-primary/30">
-      {/* Sticky Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-brand-secondary/5">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="font-display font-extrabold text-2xl tracking-tight">
-            ALL PRO<span className="text-brand-primary">.</span>
-          </div>
-          <div className="hidden md:flex gap-8 font-medium text-sm uppercase tracking-wider">
-            <a
-              href="#services"
-              className="hover:text-brand-primary transition-colors"
-            >
-              Services
-            </a>
-            <a
-              href="#work"
-              className="hover:text-brand-primary transition-colors"
-            >
-              Our Work
-            </a>
-            <a
-              href="#contact"
-              className="hover:text-brand-primary transition-colors"
-            >
-              Contact
-            </a>
-          </div>
-          <a
-            href="#contact"
-            className="bg-brand-secondary text-white px-6 py-2.5 text-sm font-bold uppercase tracking-widest hover:bg-brand-primary transition-colors"
-          >
-            Estimate
-          </a>
-        </div>
-      </nav>
-
       {/* Hero Section with Parallax Effect */}
+
       <section className="relative h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div
@@ -271,19 +237,37 @@ function Index() {
                   <div>
                     <h5 className="font-bold">Local Headquarters</h5>
                     <p className="text-white/60">
-                      123 Contractor Row, Suite 400
+                      9950 County Road
                       <br />
-                      Professional Park, ST 55401
+                      Clarence, Buffalo, NY 14032
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="size-6 bg-brand-primary mt-1" />
                   <div>
-                    <h5 className="font-bold">Call Our Lead Foreman</h5>
-                    <p className="text-white/60">(555) ALL-PROS</p>
+                    <h5 className="font-bold">Call or Text</h5>
+                    <a
+                      href="tel:716-710-0002"
+                      className="text-white/60 hover:text-brand-primary transition-colors"
+                    >
+                      716-710-0002
+                    </a>
                   </div>
                 </div>
+                <div className="flex items-start gap-4">
+                  <div className="size-6 bg-brand-primary mt-1" />
+                  <div>
+                    <h5 className="font-bold">Email Us</h5>
+                    <a
+                      href="mailto:allprohomebuffalo@gmail.com"
+                      className="text-white/60 hover:text-brand-primary transition-colors"
+                    >
+                      allprohomebuffalo@gmail.com
+                    </a>
+                  </div>
+                </div>
+
               </div>
             </div>
             <div className="bg-white/5 p-8 border border-white/10">
