@@ -16,17 +16,20 @@ export function Header() {
           <NavLink to="/" exact>
             Home
           </NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/" hash="services">
+          <NavLink to="/about" exact>
+            About
+          </NavLink>
+          <NavLink to="/" hash="services" exact>
             Services
           </NavLink>
-          <NavLink to="/" hash="work">
+          <NavLink to="/" hash="work" exact>
             Our Work
           </NavLink>
-          <NavLink to="/" hash="contact">
+          <NavLink to="/" hash="contact" exact>
             Contact
           </NavLink>
         </div>
+
 
         <Link
           to="/"
