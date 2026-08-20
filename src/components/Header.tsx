@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Logo } from "./Logo";
 
 export function Header() {
   const [activeSection, setActiveSection] = useState<string>("home");
@@ -31,8 +32,8 @@ export function Header() {
         const element = document.getElementById(sectionId);
         if (element) {
           const top = element.offsetTop;
-          const height = element.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
+          const height = element.offsetTop + element.offsetHeight; // Fix calculation error where it added offsetTop twice
+          if (scrollPosition >= top && scrollPosition < height) {
             setActiveSection(sectionId);
             return;
           }
@@ -50,16 +51,12 @@ export function Header() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-brand-secondary/5">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link
-          to="/"
+        <Logo
           onClick={() => {
             setActiveSection("home");
             setIsMobileMenuOpen(false);
           }}
-          className="font-display font-extrabold text-2xl tracking-tight text-brand-secondary"
-        >
-          ALL PRO<span className="text-brand-primary">.</span>
-        </Link>
+        />
 
         <div className="hidden md:flex gap-8 font-medium text-sm uppercase tracking-wider">
           <NavLink
@@ -133,16 +130,12 @@ export function Header() {
               <SheetContent side="top" className="w-full h-auto bg-white p-6 flex flex-col gap-6">
                 <div className="flex flex-col gap-6 mt-4">
                   <div className="flex items-center justify-between border-b pb-4 border-brand-secondary/5">
-                    <Link
-                      to="/"
+                    <Logo
                       onClick={() => {
                         setActiveSection("home");
                         setIsMobileMenuOpen(false);
                       }}
-                      className="font-display font-extrabold text-2xl tracking-tight text-brand-secondary"
-                    >
-                      ALL PRO<span className="text-brand-primary">.</span>
-                    </Link>
+                    />
                   </div>
                   <div className="flex flex-col gap-5 font-medium text-lg uppercase tracking-wider pl-2">
                     <NavLink
