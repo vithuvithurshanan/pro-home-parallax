@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import logoImg from "@/assets/logo.png";
 
-export function Logo({ className = "h-14 w-auto", onClick }: { className?: string; onClick?: () => void }) {
+export function Logo({ className = "h-16 md:h-22 w-auto", onClick }: { className?: string; onClick?: () => void }) {
   return (
     <Link
       to="/"

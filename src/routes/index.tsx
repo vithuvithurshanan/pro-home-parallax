@@ -58,7 +58,7 @@ function Index() {
           </div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24">
           <div className="max-w-3xl">
             <span className="inline-block py-1 px-3 bg-brand-primary text-white text-xs font-bold uppercase tracking-widest mb-6">
               Est. 1998
