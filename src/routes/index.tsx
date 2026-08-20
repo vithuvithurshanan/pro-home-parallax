@@ -171,14 +171,14 @@ function Index() {
                 your home's evolution.
               </p>
             </div>
-            <div className="text-brand-primary font-bold text-sm uppercase tracking-widest border-b-2 border-brand-primary pb-1">
+            <div className="text-brand-secondary font-bold text-sm uppercase tracking-widest border-b-2 border-brand-primary pb-1">
               View All Capabilities
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-brand-secondary/10 border border-brand-secondary/10">
             <div className="bg-white p-10 hover:bg-brand-muted transition-colors group">
-              <div className="size-12 bg-brand-primary/10 text-brand-primary grid place-items-center mb-8 group-hover:bg-brand-primary group-hover:text-white transition-colors">
+              <div className="size-12 bg-brand-primary text-white grid place-items-center mb-8 transition-colors">
                 <span className="font-bold">01</span>
               </div>
               <h3 className="font-display text-2xl font-bold mb-4">
@@ -195,7 +195,7 @@ function Index() {
             </div>
 
             <div className="bg-white p-10 hover:bg-brand-muted transition-colors group">
-              <div className="size-12 bg-brand-primary/10 text-brand-primary grid place-items-center mb-8 group-hover:bg-brand-primary group-hover:text-white transition-colors">
+              <div className="size-12 bg-brand-primary text-white grid place-items-center mb-8 transition-colors">
                 <span className="font-bold">02</span>
               </div>
               <h3 className="font-display text-2xl font-bold mb-4">
@@ -212,7 +212,7 @@ function Index() {
             </div>
 
             <div className="bg-white p-10 hover:bg-brand-muted transition-colors group">
-              <div className="size-12 bg-brand-primary/10 text-brand-primary grid place-items-center mb-8 group-hover:bg-brand-primary group-hover:text-white transition-colors">
+              <div className="size-12 bg-brand-primary text-white grid place-items-center mb-8 transition-colors">
                 <span className="font-bold">03</span>
               </div>
               <h3 className="font-display text-2xl font-bold mb-4">
@@ -350,9 +350,9 @@ function Index() {
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <h4 className="font-display text-xl font-bold">
+              <h3 className="font-display text-xl font-bold">
                 The Oak Street Residence
-              </h4>
+              </h3>
               <p className="text-brand-secondary/60">
                 Master Bath & Spa Conversion
               </p>
@@ -368,7 +368,7 @@ function Index() {
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <h4 className="font-display text-xl font-bold">Hilltop Estate</h4>
+              <h3 className="font-display text-xl font-bold">Hilltop Estate</h3>
               <p className="text-brand-secondary/60">
                 Exterior Siding & Decking System
               </p>
@@ -390,8 +390,8 @@ function Index() {
                 <div className="flex items-start gap-4">
                   <div className="size-6 bg-brand-primary mt-1" />
                   <div>
-                    <h5 className="font-bold">Local Headquarters</h5>
-                    <p className="text-white/60">
+                    <h4 className="font-bold">Local Headquarters</h4>
+                    <p className="text-white/80">
                       9950 County Road
                       <br />
                       Clarence, Buffalo, NY 14032
@@ -401,10 +401,10 @@ function Index() {
                 <div className="flex items-start gap-4">
                   <div className="size-6 bg-brand-primary mt-1" />
                   <div>
-                    <h5 className="font-bold">Call or Text</h5>
+                    <h4 className="font-bold">Call or Text</h4>
                     <a
                       href="tel:716-710-0002"
-                      className="text-white/60 hover:text-brand-primary transition-colors"
+                      className="text-white/80 hover:text-brand-primary transition-colors"
                     >
                       716-710-0002
                     </a>
@@ -413,10 +413,10 @@ function Index() {
                 <div className="flex items-start gap-4">
                   <div className="size-6 bg-brand-primary mt-1" />
                   <div>
-                    <h5 className="font-bold">Email Us</h5>
+                    <h4 className="font-bold">Email Us</h4>
                     <a
                       href="mailto:allprohomebuffalo@gmail.com"
-                      className="text-white/60 hover:text-brand-primary transition-colors"
+                      className="text-white/80 hover:text-brand-primary transition-colors"
                     >
                       allprohomebuffalo@gmail.com
                     </a>
