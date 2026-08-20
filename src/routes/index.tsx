@@ -179,7 +179,7 @@ function Index() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-brand-secondary/10 border border-brand-secondary/10">
             <div className="bg-white p-10 hover:bg-brand-muted transition-colors group">
               <div className="size-12 bg-brand-primary text-white grid place-items-center mb-8 transition-colors">
-                <span className="font-bold">01</span>
+                <span className="font-bold text-sm">01</span>
               </div>
               <h3 className="font-display text-2xl font-bold mb-4">
                 Kitchen & Bath
@@ -196,7 +196,7 @@ function Index() {
 
             <div className="bg-white p-10 hover:bg-brand-muted transition-colors group">
               <div className="size-12 bg-brand-primary text-white grid place-items-center mb-8 transition-colors">
-                <span className="font-bold">02</span>
+                <span className="font-bold text-sm">02</span>
               </div>
               <h3 className="font-display text-2xl font-bold mb-4">
                 Exterior & Roof
@@ -213,7 +213,7 @@ function Index() {
 
             <div className="bg-white p-10 hover:bg-brand-muted transition-colors group">
               <div className="size-12 bg-brand-primary text-white grid place-items-center mb-8 transition-colors">
-                <span className="font-bold">03</span>
+                <span className="font-bold text-sm">03</span>
               </div>
               <h3 className="font-display text-2xl font-bold mb-4">
                 Handyman Pro
@@ -236,7 +236,7 @@ function Index() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <span className="inline-block py-1 px-3 bg-brand-primary text-white text-xs font-bold uppercase tracking-widest mb-6">
+              <span className="inline-block py-1 px-3 bg-brand-primary text-brand-secondary text-xs font-bold uppercase tracking-widest mb-6">
                 Est. 1998
               </span>
               <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6">
@@ -390,7 +390,7 @@ function Index() {
                 <div className="flex items-start gap-4">
                   <div className="size-6 bg-brand-primary mt-1" />
                   <div>
-                    <h4 className="font-bold">Local Headquarters</h4>
+                    <h3 className="font-bold">Local Headquarters</h3>
                     <p className="text-white/80">
                       9950 County Road
                       <br />
@@ -401,7 +401,7 @@ function Index() {
                 <div className="flex items-start gap-4">
                   <div className="size-6 bg-brand-primary mt-1" />
                   <div>
-                    <h4 className="font-bold">Call or Text</h4>
+                    <h3 className="font-bold">Call or Text</h3>
                     <a
                       href="tel:716-710-0002"
                       className="text-white/80 hover:text-brand-primary transition-colors"
@@ -413,7 +413,7 @@ function Index() {
                 <div className="flex items-start gap-4">
                   <div className="size-6 bg-brand-primary mt-1" />
                   <div>
-                    <h4 className="font-bold">Email Us</h4>
+                    <h3 className="font-bold">Email Us</h3>
                     <a
                       href="mailto:allprohomebuffalo@gmail.com"
                       className="text-white/80 hover:text-brand-primary transition-colors"
@@ -427,7 +427,7 @@ function Index() {
             </div>
             <LazyFormEmbed />
           </div>
-          <div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
+          <div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70">
             <p>&copy; 2024 All Pro Home Improvements. All Rights Reserved.</p>
             <div className="flex gap-8">
               <span>Licensed & Insured</span>
