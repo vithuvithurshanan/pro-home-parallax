@@ -70,9 +70,9 @@ function LazyFormEmbed() {
         />
       ) : (
         <div className="flex items-center justify-center h-full" style={{ minHeight: "831px" }}>
-          <div className="text-center text-brand-secondary/40">
+          <div className="text-center text-brand-secondary/80">
             <div className="w-10 h-10 border-2 border-brand-primary border-t-transparent rounded-full animate-spin mx-auto mb-3" />
-            <p className="text-sm font-medium">Loading form…</p>
+            <p className="text-sm font-semibold">Loading form…</p>
           </div>
         </div>
       )}
@@ -126,7 +126,7 @@ function Index() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24">
           <div className="max-w-3xl">
-            <span className="inline-block py-1 px-3 bg-brand-primary text-white text-xs font-bold uppercase tracking-widest mb-6">
+            <span className="inline-block py-1 px-3 bg-brand-primary text-brand-secondary text-xs font-bold uppercase tracking-widest mb-6">
               Est. 1998
             </span>
             <h1 className="font-display text-6xl md:text-8xl font-extrabold text-white leading-[0.9] mb-8">
@@ -178,51 +178,51 @@ function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-brand-secondary/10 border border-brand-secondary/10">
             <div className="bg-white p-10 hover:bg-brand-muted transition-colors group">
-              <div className="size-12 bg-brand-primary text-white grid place-items-center mb-8 transition-colors">
-                <span className="font-bold text-sm">01</span>
+              <div className="size-12 bg-brand-primary text-brand-secondary grid place-items-center mb-8 font-black text-lg transition-colors">
+                <span>01</span>
               </div>
               <h3 className="font-display text-2xl font-bold mb-4">
                 Kitchen & Bath
               </h3>
-              <p className="text-brand-secondary/70 leading-relaxed mb-6">
+              <p className="text-brand-secondary/80 leading-relaxed mb-6">
                 Full-scale renovations including custom cabinetry, tiling, and
                 premium fixture installation.
               </p>
-              <ul className="space-y-2 text-sm font-medium text-brand-secondary/50">
+              <ul className="space-y-2 text-sm font-medium text-brand-secondary/80">
                 <li>• Custom Countertops</li>
                 <li>• Layout Optimization</li>
               </ul>
             </div>
 
             <div className="bg-white p-10 hover:bg-brand-muted transition-colors group">
-              <div className="size-12 bg-brand-primary text-white grid place-items-center mb-8 transition-colors">
-                <span className="font-bold text-sm">02</span>
+              <div className="size-12 bg-brand-primary text-brand-secondary grid place-items-center mb-8 font-black text-lg transition-colors">
+                <span>02</span>
               </div>
               <h3 className="font-display text-2xl font-bold mb-4">
                 Exterior & Roof
               </h3>
-              <p className="text-brand-secondary/70 leading-relaxed mb-6">
+              <p className="text-brand-secondary/80 leading-relaxed mb-6">
                 Durable siding, professional roofing, and weatherproofing to
                 protect your biggest investment.
               </p>
-              <ul className="space-y-2 text-sm font-medium text-brand-secondary/50">
+              <ul className="space-y-2 text-sm font-medium text-brand-secondary/80">
                 <li>• Slate & Asphalt Roofing</li>
                 <li>• Vinyl & Fiber Cement Siding</li>
               </ul>
             </div>
 
             <div className="bg-white p-10 hover:bg-brand-muted transition-colors group">
-              <div className="size-12 bg-brand-primary text-white grid place-items-center mb-8 transition-colors">
-                <span className="font-bold text-sm">03</span>
+              <div className="size-12 bg-brand-primary text-brand-secondary grid place-items-center mb-8 font-black text-lg transition-colors">
+                <span>03</span>
               </div>
               <h3 className="font-display text-2xl font-bold mb-4">
                 Handyman Pro
               </h3>
-              <p className="text-brand-secondary/70 leading-relaxed mb-6">
+              <p className="text-brand-secondary/80 leading-relaxed mb-6">
                 Small repairs and maintenance tasks that keep your home running
                 smoothly all year long.
               </p>
-              <ul className="space-y-2 text-sm font-medium text-brand-secondary/50">
+              <ul className="space-y-2 text-sm font-medium text-brand-secondary/80">
                 <li>• Structural Repairs</li>
                 <li>• Deck Maintenance</li>
               </ul>
@@ -242,21 +242,21 @@ function Index() {
               <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6">
                 Who We Are
               </h2>
-              <p className="text-lg text-brand-secondary/70 leading-relaxed mb-6">
+              <p className="text-lg text-brand-secondary/80 leading-relaxed mb-6">
                 All Pro Home Improvements is a locally owned and operated home
                 improvement company serving Buffalo, Clarence, and the surrounding
                 Western New York communities. Since 1998, we have helped
                 homeowners transform houses into homes they are proud of — one
                 project, one detail, one handshake at a time.
               </p>
-              <p className="text-lg text-brand-secondary/70 leading-relaxed mb-6">
+              <p className="text-lg text-brand-secondary/80 leading-relaxed mb-6">
                 From kitchen and bath renovations to roofing, siding, and
                 handyman services, our team combines old-school craftsmanship with
                 modern techniques. We believe every job deserves a professional
                 finish, clear communication, and a respect for your time and
                 budget.
               </p>
-              <p className="text-lg text-brand-secondary/70 leading-relaxed">
+              <p className="text-lg text-brand-secondary/80 leading-relaxed">
                 We are fully licensed and insured, and every project is backed by
                 our commitment to doing the job right the first time.
               </p>
@@ -268,36 +268,36 @@ function Index() {
               </h3>
               <ul className="space-y-6">
                 <li className="flex gap-4">
-                  <div className="size-10 bg-brand-primary text-white grid place-items-center font-bold shrink-0">
+                  <div className="size-10 bg-brand-primary text-brand-secondary grid place-items-center font-black shrink-0">
                     01
                   </div>
                   <div>
                     <h4 className="font-bold text-lg">Local Expertise</h4>
-                    <p className="text-brand-secondary/60">
+                    <p className="text-brand-secondary/80">
                       Buffalo-area winters and homes need a crew that knows the
                       climate. We do.
                     </p>
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <div className="size-10 bg-brand-primary text-white grid place-items-center font-bold shrink-0">
+                  <div className="size-10 bg-brand-primary text-brand-secondary grid place-items-center font-black shrink-0">
                     02
                   </div>
                   <div>
                     <h4 className="font-bold text-lg">Transparent Pricing</h4>
-                    <p className="text-brand-secondary/60">
+                    <p className="text-brand-secondary/80">
                       No hidden fees. We walk you through every line of the
                       estimate before we start.
                     </p>
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <div className="size-10 bg-brand-primary text-white grid place-items-center font-bold shrink-0">
+                  <div className="size-10 bg-brand-primary text-brand-secondary grid place-items-center font-black shrink-0">
                     03
                   </div>
                   <div>
                     <h4 className="font-bold text-lg">Quality Materials</h4>
-                    <p className="text-brand-secondary/60">
+                    <p className="text-brand-secondary/80">
                       We use proven products and brands built to last in Western
                       New York conditions.
                     </p>
@@ -353,7 +353,7 @@ function Index() {
               <h3 className="font-display text-xl font-bold">
                 The Oak Street Residence
               </h3>
-              <p className="text-brand-secondary/60">
+              <p className="text-brand-secondary/80">
                 Master Bath & Spa Conversion
               </p>
             </div>
@@ -369,7 +369,7 @@ function Index() {
                 />
               </div>
               <h3 className="font-display text-xl font-bold">Hilltop Estate</h3>
-              <p className="text-brand-secondary/60">
+              <p className="text-brand-secondary/80">
                 Exterior Siding & Decking System
               </p>
             </div>
