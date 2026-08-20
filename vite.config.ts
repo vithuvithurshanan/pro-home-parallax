@@ -10,9 +10,13 @@ export default defineConfig({
   vite: {
     base: process.env.GITHUB_ACTIONS ? "/pro-home-parallax/" : "/",
   },
+  nitro: false,
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    prerender: {
+      enabled: true,
+    },
   },
 });
