@@ -90,6 +90,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       {
+        rel: "preload",
+        href: appCss,
+        as: "style",
+      },
+      {
         rel: "stylesheet",
         href: appCss,
       },

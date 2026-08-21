@@ -17,35 +17,51 @@ export function Header() {
       return;
     }
 
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200; // Offset for header height
+    const sectionIds = ["services", "about", "work", "contact"];
+    const sectionElements = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
 
-      // If at the very top of the page, set to home
-      if (window.scrollY < 100) {
-        setActiveSection("home");
-        return;
-      }
-
-      // Check each section's offset top position
-      const sections = ["services", "about", "work", "contact"];
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const top = element.offsetTop;
-          const height = element.offsetTop + element.offsetHeight; // Fix calculation error where it added offsetTop twice
-          if (scrollPosition >= top && scrollPosition < height) {
-            setActiveSection(sectionId);
-            return;
-          }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (window.scrollY < 80) {
+          setActiveSection("home");
+          return;
         }
+
+        const intersecting = entries.filter((e) => e.isIntersecting);
+        if (intersecting.length > 0) {
+          intersecting.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+          setActiveSection(intersecting[0].target.id);
+        }
+      },
+      {
+        rootMargin: "-96px 0px -40% 0px",
+        threshold: [0.1, 0.25, 0.5],
+      }
+    );
+
+    sectionElements.forEach((el) => observer.observe(el));
+
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY < 80) {
+            setActiveSection("home");
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    // Trigger initial calculation
-    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [isHomePage]);
 
   return (
