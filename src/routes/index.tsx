@@ -10,72 +10,40 @@ import portfolioExterior from "@/assets/portfolio-exterior.jpg";
 // This prevents the third-party __cf_bm Cloudflare cookie from being set on
 // initial page load, fixing the Lighthouse Best Practices warning.
 function LazyFormEmbed() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [shouldLoad, setShouldLoad] = useState(false);
-
   useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setShouldLoad(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "200px" } // start loading 200px before it enters viewport
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  // Once the iframe loads, inject the embed script
-  useEffect(() => {
-    if (!shouldLoad) return;
     const script = document.createElement("script");
     script.src = "https://app.allprocontractingny.com/js/form_embed.js";
     script.async = true;
     document.body.appendChild(script);
     return () => {
-      if (document.body.contains(script)) document.body.removeChild(script);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
     };
-  }, [shouldLoad]);
+  }, []);
 
   return (
     <div
-      ref={containerRef}
       className="bg-white rounded-lg p-4 border border-white/10 overflow-hidden"
       style={{ minHeight: "831px" }}
     >
-      {shouldLoad ? (
-        <iframe
-          src="https://app.allprocontractingny.com/widget/form/iv0oB5dSgv3pFewRVoWs"
-          style={{ width: "100%", height: "831px", border: "none", borderRadius: "4px" }}
-          id="inline-iv0oB5dSgv3pFewRVoWs"
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="Optin Claim"
-          data-height="831"
-          data-layout-iframe-id="inline-iv0oB5dSgv3pFewRVoWs"
-          data-form-id="iv0oB5dSgv3pFewRVoWs"
-          title="Optin Claim"
-          loading="lazy"
-        />
-      ) : (
-        <div className="flex items-center justify-center h-full" style={{ minHeight: "831px" }}>
-          <div className="text-center text-brand-secondary/80">
-            <div className="w-10 h-10 border-2 border-brand-primary border-t-transparent rounded-full animate-spin mx-auto mb-3" />
-            <p className="text-sm font-semibold">Loading form…</p>
-          </div>
-        </div>
-      )}
+      <iframe
+        src="https://app.allprocontractingny.com/widget/form/iv0oB5dSgv3pFewRVoWs"
+        style={{ width: "100%", height: "831px", border: "none", borderRadius: "4px" }}
+        id="inline-iv0oB5dSgv3pFewRVoWs"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Optin Claim"
+        data-height="831"
+        data-layout-iframe-id="inline-iv0oB5dSgv3pFewRVoWs"
+        data-form-id="iv0oB5dSgv3pFewRVoWs"
+        title="Optin Claim"
+      />
     </div>
   );
 }
