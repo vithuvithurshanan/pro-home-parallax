@@ -104,9 +104,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: appCss,
-        media: "print",
-        // @ts-expect-error onLoad attribute for media swap
-        onLoad: "this.media='all'",
       },
       { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.ico`, type: "image/x-icon" },
     ],
@@ -122,14 +119,6 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){var l=document.querySelector('link[rel="stylesheet"][media="print"]');if(l){l.addEventListener('load',function(){this.media='all'});if(l.sheet){l.media='all'}}})();`,
-          }}
-        />
-        <noscript>
-          <link rel="stylesheet" href={appCss} />
-        </noscript>
       </head>
       <body>
         {children}
